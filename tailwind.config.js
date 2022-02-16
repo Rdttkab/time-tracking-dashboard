@@ -8,6 +8,9 @@ module.exports = {
       dt: "376px",
     },
     extend: {
+      borderRadius: {
+        'cr': '50%',
+      },
       colors: {
         blue: "hsl(246, 80%, 60%)",
         "light-red-work": "hsl(15, 100%, 70%)",

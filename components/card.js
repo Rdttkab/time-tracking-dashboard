@@ -11,8 +11,8 @@ const Card = ({ data, timeFrame }) => {
   };
 
   return (
-    <div className={`${bgColorMap[data.title]} mb-6 dt:m-0 rounded-lg`}>
-      <div className="h-10 rounded-t-lg flex justify-end pr-6">
+    <div className={`${bgColorMap[data.title]} mb-6 dt:mb-0 rounded-xl`}>
+      <div className="h-10 rounded-xl flex justify-end pr-6">
         <Image
           src={`/images/icon-${data.title
             .toLowerCase()
@@ -24,9 +24,9 @@ const Card = ({ data, timeFrame }) => {
         />
       </div>
 
-      <div className="rounded-lg bg-dark-blue py-8 px-6">
+      <div className="rounded-xl bg-dark-blue py-8 px-6">
         <div className="flex justify-between items-center">
-          <span className="text-lg font-medium">{data.title}</span>
+          <span className="text-lg font-normal">{data.title}</span>
           <span className="">
             <Image
               src="/images/icon-ellipsis.svg"
@@ -37,11 +37,11 @@ const Card = ({ data, timeFrame }) => {
           </span>
         </div>
 
-        <div className="flex flex-row dt:flex-col justify-between items-center dt:items-start mt-4">
-          <span className="text-2xl font-light">
+        <div className="flex flex-row dt:flex-col justify-between items-center dt:items-start mt-10">
+          <span className="text-5xl font-light">
             {data.timeframes[timeFrame]["current"]}hrs
           </span>
-          <span className="text-xs font-normal text-pale-blue">
+          <span className="text-xs font-normal text-pale-blue mt-2">
             Last Week - {data.timeframes[timeFrame]["previous"]}hrs
           </span>
         </div>

@@ -10,6 +10,10 @@ import data from "../public/data.json";
 export default function Home() {
   const [timeFrame, setTimeFrame] = useState("daily");
 
+  function handleOnClick (e) {
+    setTimeFrame(e.target.value);
+  }
+
   return (
     <div className="bg-very-dark-blue text-white font-rubik font-normal">
       <Head>
@@ -26,34 +30,35 @@ export default function Home() {
         <title>Frontend Mentor | Time tracking dashboard</title>
       </Head>
 
-      <main className="py-20 px-6 dt:grid dt:grid-cols-4 dt:grid-rows-2 dt:gap-7">
-        <div className="bg-dark-blue mb-6 rounded-lg dt:row-span-full">
+      <main className="pt-20 px-6 dt:grid dt:grid-cols-4 dt:grid-rows-3 dt:gap-8">
+        <div className="bg-dark-blue mb-6 dt:mb-0 rounded-lg dt:row-span-2">
           <div className="">
-            <header className="bg-blue p-2 dt:px-8 dt:pt-9 dt:pb-20  flex flex-row dt:flex-col gap-4 justify-start items-center dt:items-start rounded-lg">
-              <div className="p-1 bg-white w-16 h-16 relative rounded-full dt:mb-10">
+            <header className="bg-blue p-2 px-8 dt:px-8 dt:pt-9 dt:pb-20 flex flex-row dt:flex-col gap-4 justify-start items-center dt:items-start rounded-lg">
+              <div className="p-0.5 bg-white w-16 h-16 rounded-cr dt:mb-10 mb-0">
                 <Image
                   src="/images/image-jeremy.png"
-                  alt="jermy"
-                  layout="fill"
-                  objectFit="cover"
+                  alt="jeremy avator"
+                  layout="responsive"
+                  width={64}
+                  height={64}
                 />
               </div>
               <div>
                 <span className="block text-pale-blue">Report for</span>
-                <span className="text-2xl font-light">
+                <span className="text-base dt:text-2xl font-light">
                   <span className="dt:block">Jeremy</span> Robson
                 </span>
               </div>
             </header>
           </div>
-          <form className="py-7 dt:px-8 flex dt:flex-col justify-around items-start text-lg text-pale-blue">
-            <button type="button" onClick={() => setTimeFrame("daily")}>
+          <form className="py-7 dt:py-0 px-0 dt:px-8 flex dt:flex-col justify-around dt:justify-between items-start text-lg text-pale-blue">
+            <button className="focus:text-white" type="button" value="daily" onClick={handleOnClick}>
               Daily
             </button>
-            <button type="button" onClick={() => setTimeFrame("weekly")}>
+            <button className="focus:text-white" type="button" value="weekly" onClick={handleOnClick}>
               Weekly
             </button>
-            <button type="button" onClick={() => setTimeFrame("monthly")}>
+            <button className="focus:text-white" type="button" value="monthly" onClick={handleOnClick}>
               Monthly
             </button>
           </form>
