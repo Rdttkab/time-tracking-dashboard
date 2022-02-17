@@ -35,7 +35,6 @@ const Card = ({ data, timeFrame }) => {
             <svg className="fill-pale-blue hover:fill-white hover:cursor-fancy" width="24" height="6" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
-                fill-rule="evenodd"
               />
             </svg>
           </span>
