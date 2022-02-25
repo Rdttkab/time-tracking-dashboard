@@ -4,10 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    screens: {
-      dt: "376px",
-    },
     extend: {
+      cursor: {
+        'fancy': 'url(/images/hand-pointer-regular.svg), pointer',
+      },
+      screens: {
+        dt: "376px",
+      },
+      borderRadius: {
+        'cr': '50%',
+      },
       colors: {
         blue: "hsl(246, 80%, 60%)",
         "light-red-work": "hsl(15, 100%, 70%)",
