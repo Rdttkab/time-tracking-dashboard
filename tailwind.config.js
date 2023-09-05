@@ -5,14 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      cursor: {
-        'fancy': 'url(/images/hand-pointer-regular.svg), pointer',
-      },
       screens: {
         dt: "376px",
       },
       borderRadius: {
-        'cr': '50%',
+        cr: "50%",
       },
       colors: {
         blue: "hsl(246, 80%, 60%)",
