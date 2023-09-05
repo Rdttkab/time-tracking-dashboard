@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import Card from "../components/card";
 import data from "../public/data.json";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [timeFrame, setTimeFrame] = useState("weekly");
@@ -13,7 +13,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-very-dark-blue text-white font-rubik font-normal px-6 lg:px-40 pt-20">
+    <div className="bg-very-dark-blue text-white font-rubik font-normal px-6 lg:px-40 pt-20 min-h-screen">
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -53,19 +53,21 @@ export default function Home() {
 
             <div className="py-7 sm:py-0 px-0 sm:px-8 flex sm:flex-col justify-evenly items-start content-evenl text-pale-blue grow shrink basis-auto">
               <input
-                className="focus:text-white hover:text-white hover:cursor-fancy"
+                className="focus:text-white hover:text-white hover:cursor-pointer"
                 type="button"
                 onClick={handleOnClick}
                 value="Daily"
               />
               <input
-                className={`focus:text-white hover:text-white hover:cursor-fancy ${timeFrame === 'weekly' ? 'text-white': ''}`}
+                className={`focus:text-white hover:text-white hover:cursor-pointer ${
+                  timeFrame === "weekly" ? "text-white" : ""
+                }`}
                 type="button"
                 onClick={handleOnClick}
                 value="Weekly"
               />
               <input
-                className="focus:text-white hover:text-white hover:cursor-fancy"
+                className="focus:text-white hover:text-white hover:cursor-pointer"
                 type="button"
                 onClick={handleOnClick}
                 value="Monthly"
@@ -79,17 +81,22 @@ export default function Home() {
         ))}
       </main>
 
-      <footer className="flex justify-center items-center py-6">
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className="">
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+      <footer className="flex flex-col justify-center items-center py-6">
+        <div className="attribution">
+          Challenge by &nbsp;
+          <a
+            href="https://www.frontendmentor.io?ref=challenge"
+            target="_blank"
+            rel="noreferrer">
+            Frontend Mentor.&nbsp;
+          </a>
+        </div>
+        <div>
+          Coded by{" "}
+          <a href="https://rediettekola.com/" target="_blank" rel="noreferrer">
+            Rediet Tekola
+          </a>
+        </div>
       </footer>
     </div>
   );

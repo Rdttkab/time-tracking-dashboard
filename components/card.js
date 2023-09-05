@@ -28,11 +28,11 @@ const Card = ({ data, timeFrame }) => {
         />
       </div>
 
-      <div className="rounded-xl bg-dark-blue py-8 px-6 grow shrink basis-auto hover:cursor-fancy hover:bg-desaturated-blue">
+      <div className="rounded-xl bg-dark-blue py-8 px-6 grow shrink basis-auto hover:cursor-pointer hover:bg-desaturated-blue">
         <div className="flex justify-between items-center">
           <span className="text-lg font-normal">{data.title}</span>
           <span>
-            <svg className="fill-pale-blue hover:fill-white hover:cursor-fancy" width="24" height="6" xmlns="http://www.w3.org/2000/svg">
+            <svg className="fill-pale-blue hover:fill-white hover:cursor-pointer" width="24" height="6" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
               />
